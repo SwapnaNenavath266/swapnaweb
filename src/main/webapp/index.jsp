@@ -8,14 +8,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f0f2f5;
-            color: #333;
+            background-color: #121212;
+            color: #ddd;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Navbar */
         nav {
-            background-color: #333;
+            background-color: #1e1e1e;
             color: #fff;
             padding: 15px 20px;
             display: flex;
@@ -24,6 +25,7 @@
             position: fixed;
             width: 100%;
             z-index: 1000;
+            transition: background-color 0.5s;
         }
 
         nav .logo {
@@ -70,7 +72,7 @@
             font-size: 50px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            animation: heroTextAnimation 5s infinite alternate;
+            animation: heroTextAnimation 5s infinite alternate ease-in-out;
         }
 
         .hero p {
@@ -87,6 +89,7 @@
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s;
+            animation: bounce 2s infinite;
         }
 
         .hero button:hover {
@@ -104,10 +107,16 @@
             100% { opacity: 1; }
         }
 
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
         /* Course Section */
         .courses {
             padding: 100px 20px;
-            background-color: #fff;
+            background-color: #282828;
+            color: #fff;
         }
 
         .courses h2 {
@@ -123,11 +132,21 @@
         }
 
         .courses .course-item {
-            background-color: #f7f7f7;
+            background-color: #444;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+
+        .courses .course-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .courses .course-item:nth-child(3) {
+            animation-delay: 0.4s;
         }
 
         .courses .course-item:hover {
@@ -148,14 +167,20 @@
             padding: 10px 20px;
             font-size: 16px;
             border: none;
-            background-color: #333;
+            background-color: #e94560;
             color: #fff;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .courses .course-item button:hover {
-            background-color: #555;
+            background-color: #f25f78;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
         }
 
         /* Testimonials */
@@ -178,6 +203,12 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
+
+        .testimonials .testimonial-item:hover {
+            transform: scale(1);
         }
 
         .testimonials .testimonial-item p {
@@ -195,13 +226,14 @@
         footer {
             padding: 20px;
             text-align: center;
-            background-color: #333;
+            background-color: #1e1e1e;
             color: #fff;
         }
 
         footer p {
             margin: 0;
         }
+
     </style>
 </head>
 <body>
@@ -216,45 +248,11 @@
         </ul>
     </nav>
 
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan's AWS DevOps Institute</title>
-    <style>
-        /* CSS Styles */
-        #hero {
-            background-color: black;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        #hero button {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        #hero button:hover {
-            background-color: #ddd;
-        }
-    </style>
-</head>
-<body>
-
     <section id="hero" class="hero">
         <h1>Pavan's AWS DevOps Institute</h1>
         <p>Master AWS and DevOps skills with our expert-led courses and certifications.</p>
-        <button>Get Started</button>
+        <button id="getStartedBtn">Get Started</button>
     </section>
-
-</body>
-</html>
-
 
     <section id="courses" class="courses">
         <h2>Our Courses</h2>
@@ -286,21 +284,38 @@
         <h2>What Our Students Say</h2>
         <div class="testimonial-item">
             <p>"The courses offered at Pavan's AWS DevOps Institute helped me gain the skills I needed to excel in my career. Highly recommended!"</p>
-            <h3>Ramya</h3>
+            <h3>Ram</h3>
         </div>
         <div class="testimonial-item">
             <p>"The instructors are knowledgeable, and the content is well-structured. I was able to get AWS certified thanks to this institute."</p>
-            <h3>Jyoshna</h3>
+            <h3>Krishna</h3>
         </div>
         <div class="testimonial-item">
             <p>"This is the best place to learn AWS and DevOps. The hands-on labs and real-world examples were particularly helpful."</p>
-            <h3>Pavan</h3>
+            <h3>Arjuna</h3>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Pavan's AWS DevOps Institute. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Event listener for Get Started button with animation
+        document.getElementById('getStartedBtn').addEventListener('click', () => {
+            alert('Get ready to master AWS and DevOps!');
+        });
+    </script>
 
 </body>
 </html>
