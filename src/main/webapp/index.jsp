@@ -296,9 +296,7 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Pavan's AWS DevOps Institute. All Rights Reserved.</p>
-    </footer>
+
 
     <script>
         // JavaScript for smooth scrolling
@@ -316,6 +314,35 @@
             alert('Get ready to master AWS and DevOps!');
         });
     </script>
+    <section id="contact" class="contact" style="background-color: #1e1e1e; padding: 100px 20px; color: #fff;">
+    <h2 style="text-align: center; font-size: 36px; margin-bottom: 50px;">Contact Us</h2>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <form action="#" method="post" style="width: 100%; max-width: 600px; background-color: #282828; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <div style="margin-bottom: 15px;">
+                <label for="name" style="display: block; margin-bottom: 5px;">Name</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #444; color: #fff;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #444; color: #fff;">
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="message" style="display: block; margin-bottom: 5px;">Message</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background-color: #444; color: #fff;"></textarea>
+            </div>
+            <button type="submit" style="padding: 10px 20px; background-color: #e94560; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background-color 0.3s;">Send Message</button>
+        </form>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+        <p>Email: <a href="mailto:pavan.aningi1998@gmail.com" style="color: #e94560; text-decoration: none;">pavan.aningi1998@gmail.com</a></p>
+        <p>Phone: <a href="tel:9505950521" style="color: #e94560; text-decoration: none;">9505950521</a></p>
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Pavan's AWS DevOps Institute. All Rights Reserved.</p>
+    </footer>
+
 
 </body>
 </html>
