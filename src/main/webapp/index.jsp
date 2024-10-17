@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swapna's AWS DevOps Institute</title>
+    <title>Pavan's AWS DevOps Institute</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -254,7 +254,7 @@
     </nav>
 
     <section id="hero" class="hero">
-        <h1>Swapna's AWS DevOps Institute</h1>
+        <h1>Pavan's AWS DevOps Institute</h1>
         <p>Master AWS and DevOps skills with our expert-led courses and certifications.</p>
         <button id="getStartedBtn">Get Started</button>
     </section>
