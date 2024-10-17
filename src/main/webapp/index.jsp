@@ -254,7 +254,7 @@
     </nav>
 
     <section id="hero" class="hero">
-        <h1>Pavan's AWS DevOps Institute</h1>
+        <h1>Swapna's AWS DevOps Institute</h1>
         <p>Master AWS and DevOps skills with our expert-led courses and certifications.</p>
         <button id="getStartedBtn">Get Started</button>
     </section>
