@@ -9,10 +9,7 @@
 	<url>http://maven.apache.org</url>
 
 
-
-	
-	
-	<properties>
+<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 		<sonar.host.url>http://13.232.34.3:9000/</sonar.host.url>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
