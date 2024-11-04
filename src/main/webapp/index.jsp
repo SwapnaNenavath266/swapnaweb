@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>swapna1's AWS DevOps Institute</title>
+    <title>swapna Nenavath's AWS Cloud Engineering </title>
     <style>
         body {
             font-family: Arial, sans-serif;
